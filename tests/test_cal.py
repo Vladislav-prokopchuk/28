@@ -1,5 +1,12 @@
+import sys
+import os
+
+# Додаємо батьківську директорію до шляху
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from calculator import Calculator  # Тепер імпорт працюватиме
+
 import pytest
-from calculator import Calculator
 
 
 @pytest.fixture
